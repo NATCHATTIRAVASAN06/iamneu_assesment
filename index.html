@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light mb-1">
+        <a class="navbar-brand text-info ms-3">iamneu.ai Talent Center</a>
+        <div class="d-flex">
+            <button type="button" class="btn btn-secondary bg-info me-2 mt-1 candid" data-toggle="modal"
+                data-target="#myCusModel">Add Candidate</button>
+            <div class="search-bar me-3">
+                <input type="text" id="searchbar" placeholder="Search..." />
+            </div>
+        </div>
+    </nav>
+
+    <div class="drag-container">
+        <ul class="drag-list">
+            <li class="drag-column">
+                <span class="drag-column-header">
+                    <h2>Open - <span class="item-count"></span></h2>
+                </span>
+                <div class="drag-options" id="options1"></div>
+                <ul class="drag-inner-list" id="1">
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 1</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 2</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="drag-column">
+                <span class="drag-column-header">
+                    <h2>Contacted - <span class="item-count"></span></h2>
+                </span>
+                <div class="drag-options" id="options2"></div>
+                <ul class="drag-inner-list" id="2">
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 3</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 4</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 5</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="drag-column">
+                <span class="drag-column-header">
+                    <h2>Written test - <span class="item-count"></span></h2>
+                </span>
+                <div class="drag-options" id="options3"></div>
+                <ul class="drag-inner-list" id="3">
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 6</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 7</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 8</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 9</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="drag-column">
+                <span class="drag-column-header">
+                    <h2>Written Test completed - <span class="item-count"></span></h2>
+                </span>
+                <div class="drag-options" id="options4"></div>
+                <ul class="drag-inner-list" id="4">
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 10</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drag-item">
+                        <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                            <div class="mb-auto p-2 card-name">Item 11</div>
+                            <div class="p-2 bg-info star-container">
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                                <span class="checked">☆</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="drag-column">
+                <span class="drag-column-header">
+                    <h2>Newton's School - <span class="item-count"></span></h2>
+                </span>
+                <div class="drag-options" id="options5"></div>
+                <ul class="drag-inner-list" id="5">
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="modal" id="myCusModel" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Candidate</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="add-card">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="modal-name">Name : </label>
+                            <input type="text" class="form-control" id="modal-name" placeholder="Enter Name" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="modal-status">Select Status : </label>
+                            <select class="form-select" id="modal-status" required>
+                                <option selected>Select menu</option>
+                                <option value="1">Open</option>
+                                <option value="2">Contacted</option>
+                                <option value="3">Written Test</option>
+                                <option value="4">Written Test Completed</option>
+                                <option value="5">Newton's School</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                        <button type="button" class="btn btn-secondary model-close" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="dummy d-none">
+        <li class="drag-item">
+            <div class="d-flex align-items-start flex-column" style="height: 100%;">
+                <div class="mb-auto p-2 card-name"></div>
+                <div class="p-2 bg-info star-container">
+                    <span class="checked">☆</span>
+                    <span class="checked">☆</span>
+                    <span class="checked">☆</span>
+                    <span class="checked">☆</span>
+                    <span class="checked">☆</span>
+                </div>
+            </div>
+        </li>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
