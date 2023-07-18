@@ -11,7 +11,7 @@ body {
 body {
     background: rgb(227, 233, 247) !important;
     color: white;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: 300;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
